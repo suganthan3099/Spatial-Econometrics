@@ -1,17 +1,18 @@
 ## Useful Links
 - [Inside Airbnb Madrid](https://insideairbnb.com/madrid/)
-Introduction
+
+## Introduction
 Spatial econometrics is a sub-discipline within the field of econometrics whose analytical techniques are designed to incorporate dependence among observations (regions or points in space) into traditional econometric models. spatial dependence exists between the observations and spatial heterogeneity is what distinguishes Spatial econometrics from traditional econometrics (James, 1999). Econometrics is an analysis based on economic theory mathematical and statistical models to understand economical relationship and forecast future trends. In short, it’s an economic analysis on Madrid with spatial and other economic factors.
 
 This study is based on Airbnb data of Madrid, primary goal is to build a model that could predict the pricing based on the attributes which will be discussed in further session. To achieve this model there will be series of analysis on spatial and non-spatial attributes and will have look on how spatial attribute has a significant influence on the model. Selection of predictors and outcome variables as well. And further session will break down the complexity of the terms and methods mentioned. And to mention to avoid overwhelming of code I’ve hidden all the code so please click the play button near to “Code” to view code for this entire study.
 
-***Spatial dependence
+## Spatial dependence 
 According to the concept of spatial dependence, observations obtained at different locations are not independent of one another; that is, the values of a given variable at one location affect the values of the same variable at other neighbouring locations. This effect can manifest itself in a variety of ways. Examples of this include geographical heterogeneity, which is the variability of a variable across space, and spatial autocorrelation, which is the similarity of neighbouring data (Anselin, 2010).
 
-**1. Kernel density estimation(KDE)
+### 1. Kernel density estimation(KDE)
 “Kernel density estimation is a nonparametric technique for density estimation which takes as its input a sample of data and, by associating a suitable non-negative function (the ‘kernel’) with each point of the sample, produces a continuous estimate of the probability density from which the sample is assumed to be drawn” (Silverman, 2018). Through the identification of patterns of clustering or dispersion within a specific area, kernel density estimation(KDE) can yield insights into spatial dependency. From the figure () the difference between a Hexbin map representing number of data points in a hexagonal polygon and KDE map can be visualized, were KDE represents hotspots were the possibility of clusters would be high
 
 ![image](https://github.com/user-attachments/assets/7a683540-094f-47fb-8171-325482ead8c7)
 
-**2.Inverse distance weighting
+### 2.Inverse distance weighting
 “Inverse distance weighting is a method for interpolation that computes the values at unsampled locations as weighted averages of observed values, with the weights being inversely related to the distance between the sampled and unsampled locations. (Shepard, 1968)”. This is a spatial interpolation method used to estimate values at unmeasured locations based on the values at surrounding measured locations. It assumes that the influence of nearby points on the estimation decreases as distance increases. Spatial interpolation was performed using Inverse Distance Weighting (IDW) methodology. A regular grid is created on the study area (100*100) with 10000 equally spaced cells. IDW estimated property prices at these grid points based on the values at nearby observed locations from the dataset. The method assigns weights inversely proportional to distances, with closer points exerting greater influence.
