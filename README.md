@@ -1,4 +1,7 @@
-## Useful Links
+# Spatial Econometric Analysis of Airbnb Listing Prices in Madrid
+*Author*
+**Suganthan**
+## Data
 - [Inside Airbnb Madrid](https://insideairbnb.com/madrid/)
 
 ## Introduction
